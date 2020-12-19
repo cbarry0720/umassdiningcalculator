@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <form method="POST">
+            <label for="food">Choose a food:</label>
+            <select id="food" name="food">
+                {% for food in allFoods %}
+                <option value="{{food}}">{{food}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" name="enter" value="Add Foods">
+            <a href = /results>
+            <button name = "Submit" type = "button"> 
+                 Get Results
+            </button>
+        </form>
+    </body>
+</html>
