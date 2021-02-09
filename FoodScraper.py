@@ -156,7 +156,8 @@ def foodCalc():
         totals["dailyCarbs"] += int(allFoods[result]['carbs-dv'])
         totals["dailyChol"] += int(allFoods[result]['cholesterol-dv'])
         totals["dailySodium"] += int(allFoods[result]['sodium-dv'])
-    return render_template("index.html", allFoods = allFoods)
+    sortedFoods = sorted(allFoods)
+    return render_template("index.html", allFoods = sortedFoods)
 
 @app.route("/results", methods = ["GET", "POST"])
 def results():
