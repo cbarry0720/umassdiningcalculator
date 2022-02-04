@@ -1,0 +1,13 @@
+#back-button{
+    display:none;
+}
+
+@media (max-width:800px){
+    .banner{
+        display: none;
+    }
+    #back-button{
+        display:flex;
+        background-color: maroon;
+    }
+}
