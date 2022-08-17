@@ -19,7 +19,7 @@ function FoodSelector(){
             return null;
         }
 
-        axios.get("http://45.56.115.124/foods", {params: {loc: location.state.name}}).then(function(x){
+        axios.get("http://45.56.115.124:5000/foods", {params: {loc: location.state.name}}).then(function(x){
             let json = x.data;
             console.log(json)
             setFoods(json);
@@ -79,7 +79,7 @@ function FoodSelector(){
             <div id="search-submit" >
                 <input type="search" onChange={handleSearch} placeholder="Search Food"/>
                 <Link id="submit-button" to="/results" state={{total: total}}>
-                    Submit
+                    Calculate
                 </Link>
             </div>
             {outputFoods(foods)}
