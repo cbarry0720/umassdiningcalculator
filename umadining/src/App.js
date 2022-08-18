@@ -1,11 +1,8 @@
-import logo from './logo.svg';
 import Locations from './views/Locations';
 import Results from './views/Results';
 import './App.css';
-import Banner from './components/Banner';
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import FoodSelector from './views/FoodSelector';
-import { useState } from "react";
 
 function App() {
 

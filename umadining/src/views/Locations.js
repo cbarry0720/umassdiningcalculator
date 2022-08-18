@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
 import Banner from "../components/Banner";
 function Locations({setLocation}){
 
