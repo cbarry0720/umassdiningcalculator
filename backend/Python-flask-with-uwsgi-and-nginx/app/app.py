@@ -42,7 +42,7 @@ cors = CORS(app)
 app.config["CORS_HEADERS"] = "Content-Type"
 
 
-@app.route("/foods", methods=["GET"])
+@app.route("/api/foods", methods=["GET"])
 @cross_origin()
 def foodCalc():
     jsonFile = {}
@@ -96,7 +96,7 @@ def foodCalc():
             jsonFile[location[0]].update(jsonData)
     return jsonFile
 
-@app.route("/results", methods = ["GET", "POST"])
+@app.route("/api/results", methods = ["GET", "POST"])
 def results():
     totals["totalProt"] = format(totals["totalProt"], '.2f') + "g"
     totals["totalFat"] = format(totals["totalFat"], '.2f') + "g"

@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename='/calculator'>
         <Routes>
           <Route index path="/" element={<Locations/>} />
           <Route path="/foods" element={<FoodSelector/>}/>
