@@ -5,6 +5,7 @@
 .location-name{
     font-size: 2em;
     font-weight: bold;
+    margin: 10px;
 }
 .food-item{
     display:inline-flex;
