@@ -67,17 +67,20 @@ def foodCalc():
     locs = []
     date = datetime.datetime.now().date().__str__()
 
-    visits = open("visits.json", "r")
-    data = json.load(visits)
-    visits.close()
+    try:
+        visits = open("visits.json", "r")
+        data = json.load(visits)
+        visits.close()
 
-    visits = open("visits.json", "w")
-    if (date in data):
-        data[date] = data[date] + 1
-    else:
-        data[date] = 1
-    json.dump(data, visits)
-    visits.close()
+        visits = open("visits.json", "w")
+        if (date in data):
+            data[date] = data[date] + 1
+        else:
+            data[date] = 1
+        json.dump(data, visits)
+        visits.close()
+    except:
+        print("file error")
 
     if "Berkshire Dining Commons" == args["loc"]:
         f = open("berk.json")
