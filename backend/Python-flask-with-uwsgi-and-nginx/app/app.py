@@ -65,7 +65,9 @@ def foodCalc():
     if "loc" not in args:
         return "NOT FOUND"
     locs = []
-    date = datetime.datetime.now().date().__str__()
+    date = (datetime.datetime.now() -
+            datetime.timedelta(hours=6)).date()
+    date = str(date)
 
     try:
         visits = open("visits.json", "r")
