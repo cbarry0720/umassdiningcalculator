@@ -169,7 +169,7 @@ def foodCalc():
         json.dump({"time": date, "jsonData": jsonFile}, f)
         f.close()
     elif "Hampshire Dining Commons" == args["loc"]:
-        f = open("hampshire.json", "w")
+        f = open("hamp.json", "w")
         json.dump({"time": date, "jsonData": jsonFile}, f)
         f.close()
     elif "Worcester Dining Commons" == args["loc"]:
